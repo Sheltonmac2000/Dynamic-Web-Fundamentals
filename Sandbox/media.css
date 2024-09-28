@@ -1,0 +1,40 @@
+body {  
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 1em;
+    background-color: beige;    
+}
+
+header, main, footer {
+    margin: auto;
+    max-width: 640px;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.bigger {
+    font-size: 1.2em;
+}
+
+section {
+    background-color: white;
+    padding: 1em;
+}
+
+/* There is an implied if statement here, where the condition is if the screen is at least 600px wide */
+@media screen and (min-width: 600px) {
+    header {
+        background-color: black;
+        color: white;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
