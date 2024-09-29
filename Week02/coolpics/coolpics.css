@@ -1,0 +1,131 @@
+ @import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+ :root {
+ --primary-color: #52489c;
+ --secondary-color: #59c3c3;
+ --accent-color: #f45b69;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: Mooli, san-serif;
+ }
+
+body {
+    margin: 0;
+    font-family: var(--primary-font)
+}
+
+img {
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid #fffdfd;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0) ;
+    
+}
+
+.camera {
+    max-width: 100%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    background-color: var(--primary-color);
+ 
+  
+    
+}
+
+.navbar {
+    border: 1px solid #000000;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1em;
+    
+}
+
+.nav-button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-bottom: 1px;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+button{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+.heading {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.nav-links, a {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    /* margin: 1em; */
+    color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        max-width: 600px;
+    }
+
+    .gallery {
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    button{
+    position:absolute;
+    top: 20%;
+    left: 19%;
+    transform: translate(-50%, -0%);
+    padding: 10px 20px;
+}
+}
