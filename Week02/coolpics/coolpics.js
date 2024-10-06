@@ -29,3 +29,6 @@ function toggleLinks(){
 
 button.addEventListener("click", toggleLinks);
 // button.addEventListener("click", showLinks);
+// Notes: The menu should not show when the page is resized to 600px. This should hide when 
+// the page is resized to 600px.
+
