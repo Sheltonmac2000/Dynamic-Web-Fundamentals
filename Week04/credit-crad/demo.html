@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Credit Card</title>
+  <link rel="stylesheet" href="demo.css">
+    <script src="demo.js" defer ></script>
+</head>
+<body>
+  <div class="card-container">
+    <div class="credit-card" id="credit-card">
+      <!-- Front side of the card -->
+      <div class="card-front">
+        <div class="card-number" id="card-number">#### #### #### ####</div>
+        <div class="card-holder">
+          <span>Card Holder</span>
+          <div id="card-holder">Your Name</div>
+        </div>
+        <div class="expiration">
+          <span>Expires</span>
+          <div id="card-expiration">MM/YY</div>
+        </div>
+      </div>
+      <!-- Back side of the card -->
+      <div class="card-back">
+        <div class="stripe"></div>
+        <div class="cvv">
+          <label for="input-cvv">CVV</label>
+          <input type="text" id="input-cvv" maxlength="3" placeholder="123">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Form inputs embedded into the card -->
+    <div class="input-fields">
+      <input type="text" id="input-card-number" maxlength="19" placeholder="Card Number">
+      <input type="text" id="input-card-holder" placeholder="Card Holder Name">
+      <input type="text" id="input-expiration-month" maxlength="2" placeholder="MM">
+      <input type="text" id="input-expiration-year" maxlength="2" placeholder="YY">
+      <button type="button" id="flip-card">Flip to Back</button>
+    </div>
+  </div>
+
+ 
+</body>
+</html>
