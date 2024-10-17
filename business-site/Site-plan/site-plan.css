@@ -195,3 +195,18 @@ nav a:hover {
 .home-wireframe{
   width: 500px;
 }
+.navigation-links{
+  background-color: rgb(255, 255, 255);
+  border: #254E70 solid 1px;
+  color: white;
+}
+
+.contact-form input{
+  background-color: #f8fdff;
+  color: rgb(0, 0, 0);
+  border: #254E70 solid 1px;
+  padding: 10px;
+  /* align-items: center;
+   */
+  align-content: center;
+}
