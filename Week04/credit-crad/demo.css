@@ -17,62 +17,26 @@ body {
   position: relative;
   width: 350px;
   height: 220px;
+  margin-bottom: 50px;
 }
 
+/* Base styles for both card sides */
 .credit-card {
-  width: 100%;
-  height: 100%;
-  perspective: 1000px;
-}
-
-.card-front, .card-back {
   width: 100%;
   height: 100%;
   border-radius: 15px;
   position: absolute;
-  backface-visibility: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
 }
 
-.card-front {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform: rotateY(0deg);
-  transition: transform 0.8s;
-}
-
+/* Back side of the card */
 .card-back {
   background-color: #555;
   color: white;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transform: rotateY(180deg);
-  transition: transform 0.8s;
-}
-
-.card-container.flipped .card-front {
-  transform: rotateY(180deg);
-}
-
-.card-container.flipped .card-back {
-  transform: rotateY(360deg);
-}
-
-.card-number {
-  font-size: 1.5em;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-}
-
-.card-holder, .expiration {
-  display: flex;
-  justify-content: space-between;
+  z-index: 1;
+  transform: rotateY(0deg);
 }
 
 .stripe {
@@ -95,10 +59,30 @@ body {
   border-radius: 5px;
 }
 
+/* Front side of the card (overlapping the back) */
+.card-front {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  z-index: 2;
+  transform: translateY(-30px) translateX(-15px); /* Slight offset to reveal the back card */
+}
+
+.card-number {
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.card-holder, .expiration {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Input fields on the front of the card */
 .input-fields {
   position: absolute;
-  top: 70px;
+  top: 60px;
   left: 10px;
   width: 330px;
 }
@@ -117,15 +101,4 @@ body {
 
 .input-fields input::placeholder {
   color: rgba(255, 255, 255, 0.6);
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 1em;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }

@@ -4,11 +4,11 @@
     --tertiary-color: #8ee3ef;
     --color-4: #f0f0f0;
     --heaeding-font: "Roboto Slab";
-    --paragraph-font: Roboto Serif;
+    --paragraph-font: Raleway, sans-serif;
 }   
 
- 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+ /* Main content font */
+body,h1,h2,h3,h4,h5,h6 {font-family: var(--paragraph-font)}
 
 body, html {
   height: 100%;
@@ -19,7 +19,7 @@ body, html {
 .backgroundImg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("/w3images/mac.jpg");
+  /* background-image: url("/w3images/mac.jpg"); */
   min-height: 70%;
   background-color: violet;
 }

@@ -27,6 +27,7 @@ document
     )}/${document.getElementById("input-expiration-year").value || "YY"}`;
   });
 
+// Fix: change `document` to the element with id `input-expiration-year`
 document
   .getElementById("input-expiration-year")
   .addEventListener("input", function () {
@@ -35,8 +36,3 @@ document
       .getElementById("input-expiration-month")
       .value.padStart(2, "0")}/${year || "YY"}`;
   });
-
-// Flip card to show the back (for CVV input)
-document.getElementById("flip-card").addEventListener("click", function () {
-  document.querySelector(".card-container").classList.toggle("flipped");
-});
