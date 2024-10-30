@@ -6,7 +6,7 @@ import { teamMembers } from "./teamData.js";
 
 var mySidebar = document.getElementById("mySidebar");
 
-function w3_open() {
+window.w3_open =  function() {
   if (mySidebar.style.display === 'block') {
     mySidebar.style.display = 'none';
   } else {
@@ -15,10 +15,12 @@ function w3_open() {
 }
 
 // Close the sidebar with the close button
-function w3_close() {
+window.w3_close = function() {
     mySidebar.style.display = "none";
 }
  
+// w3_close();
+// w3_open();
 
 // This will shuffle the industry items and display them randomly after the page loads.
 document.addEventListener("DOMContentLoaded", function () {
