@@ -15,6 +15,10 @@ body, html {
   line-height: 1.8;
 }
 
+/* body {
+  margin: 0;
+} */
+
 /* Full height image header */
 .backgroundImg-1 {
   background-position: center;
@@ -44,3 +48,51 @@ body, html {
   /* height: 100%; */
   width: 300px;
 }
+
+#cert-images img {
+  /* height: 40vh; */
+  /* height: 100%; */
+  width: 300px;
+  margin-left: 35px;
+  margin-right: 35px;
+  
+}
+
+footer {
+  color: white;
+  background-color: black;
+  
+}
+
+.footer {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer .social-icons {
+            margin: 20px 0;
+        }
+
+        .footer .social-icons i {
+            color: white;
+            padding: 10px;
+            margin: 0 5px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer .social-icons i:hover {
+            color: #ffcc00;
+        }
+
+        .footer p {
+            margin: 0;
+            padding-top: 10px;
+            font-size: 14px;
+            color: #aaa;

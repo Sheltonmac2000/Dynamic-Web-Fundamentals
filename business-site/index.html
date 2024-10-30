@@ -14,14 +14,23 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
+    <a href="#home" class="w3-bar-item w3-button ">HOME</a>
     <!-- <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Home</a> -->
     <!-- <div id="mainLogo">
         <img class="w3-image " src="images/logo.jpeg" alt="">
     </div> -->
-    <!-- Right-sided navbar links -->
+    <!-- Right-side navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-2x"></i> About</a>
+      <div id="dropdown" class="w3-dropdown-hover">
+        <button class="w3-bar-item w3-button"> Industries <i class="fa fa-caret-down"> </i> </button>
+        <div id="dropdown-content" class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Accounting</a>
+          <a href="#" class="w3-bar-item w3-button">Finance</a>
+          <a href="#" class="w3-bar-item w3-button">Legal</a> 
+        </div>
+      </div>
+      
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
@@ -40,15 +49,15 @@
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
   <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+
 </nav>
 
 <!-- Header with full-height image -->
 <header id="hero-image-container" class="backgroundImg-1 w3-display-container w3-grayscale-min ">
    
    <div>
-    <img id="heroImage" class="w3-image" src="images/logo.jpeg" alt="Architecture">
+    <img id="heroImage" class="w3-image" src="images/logo.jpeg" alt="mainLogo">
     </div> 
    
   <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -99,22 +108,65 @@
   </div>
 </div>
 
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
+<!-- Work Section -->
+ <div class="w3-container  w3-light-grey" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">OUR WORK</h3>
+  <p class="w3-center w3-large">The Industries We Serve</p>
+
+  <div id="myGrid" class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6  w3-border">
+      <img src="images/farming.jpg" style="width:100%"  class="w3-hover-opacity" alt="A microphone">
+      <h3> Agriculture</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+    </div>
+    <div class="w3-col l3 m6 w3-border">
+      <img src="images/manufacturing.jpg" style="width:100%"  class="w3-hover-opacity" alt="A phone">
+      <h3> Manufacturing</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+    </div>
+    <div class="w3-col l3 m6 w3-border">
+      <img src="images/medical.jpeg" style="width:100%"  class="w3-hover-opacity" alt="A drone">
+      <h3> Medical Care</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+    </div>
+    <div class="w3-col l3 m6 w3-border">
+      <img src="images/restaurant.webp" style="width:100%"  class="w3-hover-opacity" alt="Soundbox">
+      <h3> Catering</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+    </div>
+  </div>
+
+  <!-- Placeholers for adding more industries if needed -->
+  <!-- <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_tablet.jpg" style="width:100%" class="w3-hover-opacity" alt="A placeholder">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_camera.jpg" style="width:100%" class="w3-hover-opacity" alt="A placeholder">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_typewriter.jpg" style="width:100%" class="w3-hover-opacity" alt="A placeholder">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_tableturner.jpg" style="width:100%" class="w3-hover-opacity" alt="A placeholder">
+    </div>
+  </div>
+</div> -->
+
+<div class="w3-container w3-white" style="padding:128px 16px">
   <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>We can add something here.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-    </div>
+   
+   <div id="cert-images" class="w3-row-padding">
+    <h3 class="w3-center" > Our Certifications</h3>
+    <img src="images/cert1.jpeg" alt="certifcation1" class="w3-padding-small w3-col l3 m6  ">
+    <img src="images/cert2.jpeg" alt="certification2" class="w3-padding-small w3-col l3 m6 ">
+    <img src="images/cert3.jpeg" alt="certification3" class="w3-padding-small w3-col l3 m6 ">
+   </div>
   </div>
 </div>
 
 <!-- Team Section -->
-<div  class="w3-container" style="padding:128px 16px" id="team">
+<div  class="w3-container w3-light-gray" style="padding:128px 16px" id="team">
   <h3 class="w3-center">THE TEAM</h3>
   <p class="w3-center w3-large">The ones who runs this company</p>
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
@@ -140,28 +192,7 @@
         </div>
       </div>
     </div>
-    <!-- <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Web Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-        <div class="w3-container">
-          <h3>Dan Star</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div> -->
+
   </div>
 </div>
 
@@ -186,48 +217,7 @@
 </div>
 
 <!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">The Industries We Serve</p>
 
-  <div id="myGrid" class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6  w3-border">
-      <img src="images/farming.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-      <h3> Agriculture</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-    </div>
-    <div class="w3-col l3 m6 w3-border">
-      <img src="images/manufacturing.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-      <h3> Manufacturing</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-    </div>
-    <div class="w3-col l3 m6 w3-border">
-      <img src="images/medical.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-      <h3> Medical Care</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-    </div>
-    <div class="w3-col l3 m6 w3-border">
-      <img src="images/restaurant.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-      <h3> Catering</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A placeholder">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A placeholder">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A placeholder">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A placeholder">
-    </div>
-  </div>
-</div>
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -237,36 +227,6 @@
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
-
-<!-- Skills Section -->
-<!-- <div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- Pricing Section -->
-
 
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
@@ -293,8 +253,8 @@
   </div>
 </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+<!-- Footer using the w3.css framework -->
+<!-- <footer id="myFooter" class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -304,11 +264,29 @@
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
-   <p>Built by Shelton Macamo </p>
+  <p>Built by Shelton Macamo</p>
+</footer> -->
+
+
+<!-- Footer just using CSS -->
+<footer>
+    <div class="footer">
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="social-icons">
+            <i class="fa fa-facebook-official"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-snapchat"></i>
+            <i class="fa fa-pinterest-p"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>&copy; 2024 Tovela Bookkeeping & Client Accounting Services | All Rights Reserved</p>
+    </div>
 </footer>
- 
  
 
 </body>
 </html>
+
+
+<!-- For the homepage. Use JS to generate random descriptions of the different industries. Each time the page is reloaded, a new description is generated -->

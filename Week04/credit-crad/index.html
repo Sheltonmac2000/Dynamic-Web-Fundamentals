@@ -3,27 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- import w3.css framework -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="crad.css">
-    <link rel="stylesheet" href="card.js">
-    <title>Document</title>
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="card.css">
 </head>
 <body>
-    <div id="card-container" class="w3-card-4 w3-blue w3-padding-16 w3-round">
-        <form class="w3-container">
 
-        <h4 id="card-total">Total: $99</H4>
-        <label class="w3-text-blue"><b>CARD NUMBER</b></label>
-        <input class="w3-input w3-border" type="text">
- 
-        <label class="w3-text-blue"><b>CARD HOLDER</b></label>
-        <input class="w3-input w3-border" type="text">
+    <div id="card-success" class="hidden">
+  <i class="fa fa-check"></i>
+  <p> Your Payment was Successful!</p>
+</div>
+<div id="form-errors" class="hidden">
+  <i class="fa fa-exclamation-triangle"></i>
+  <p id="card-error">Card error</p>
+</div>
+<div id="form-container">
 
-        <button class="w3-btn w3-blue">Register</button>
- 
-        </form>
-
+  <div id="card-front">
+    <div id="shadow"></div>
+    <div id="image-container">
+      <span id="amount">paying: <strong>$10</strong></span>
+      <span id="card-image">
+      
+        </span>
     </div>
+
+
+    <label for="card-number">
+        Card Number
+      </label>
+    <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16">
+    <div id="cardholder-container">
+      <label for="card-holder">Card Holder
+      </label>
+      <input type="text" id="card-holder" placeholder="Your Name" />
+    </div>
+
+
+    <div id="expiration-date">
+      <label for="card-exp">
+          Expiration Date
+        </label>
+      <input id="card-month" type="text" placeholder="MM" length="2">
+      <input id="card-year" type="text" placeholder="YY" length="2">
+    </div>
+        <div id="cvc-container">
+      <label for="card-cvc"> CVC/CVV</label>
+      <input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="3">
+      <p>Last 3 digits of Card</p>
+    </div>
+    <!--- end CVC container --->
+    <!--- end exp container --->
+  </div>
+  <!--- end card front --->
+  <div id="card-back">
+    <div id="card-stripe">
+    </div>
+
+  </div>
+
+  <div id="submit-button">  
+  <input type="text" id="card-token" />
+  <button type="button" id="card-button">Submit</button>
+    </div>
+</div>
+
 </body>
 </html>
