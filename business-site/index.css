@@ -15,9 +15,9 @@ body, html {
   line-height: 1.8;
 }
 
-/* body {
+body {
   margin: 0;
-} */
+}
 
 /* Full height image header */
 .backgroundImg-1 {
@@ -35,6 +35,14 @@ body, html {
 #teamMember {
   background-color: var(--secondary-color);
   /* margin-left: 00px; */
+  color: white;
+}
+
+#teamMember img {
+  /* border-radius: 50%; */
+  height: 45vh;
+  /* margin-left: 35px;
+  margin-right: 35px; */
 }
 
 #heroImage {
@@ -96,3 +104,19 @@ footer {
             padding-top: 10px;
             font-size: 14px;
             color: #aaa;
+
+        }
+#grid-agriculture {
+  background-color: lightgray;
+  color: rgb(0, 0, 0);
+}
+
+#grid-manufacturing {
+  /* background-color: var(--secondary-color); */
+  color: black;
+}
+
+#grid-medical{
+  background-color: lightgray;
+  color: rgb(0, 0, 0);
+}
