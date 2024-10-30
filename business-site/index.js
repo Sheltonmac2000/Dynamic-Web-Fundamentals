@@ -2,6 +2,7 @@
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon. Uses conditional statements to check if the sidebar is open or closed. 
 // If it is open, it will hide it. If it is closed, it will show it.
+import { teamMembers } from "./teamData.js";
 
 var mySidebar = document.getElementById("mySidebar");
 
@@ -40,32 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Team member data object. Add new team members here when needed.
 
-const teamMembers = [
-  {
-    name: "Alberto Tovela",
-    role: "CEO & Founder",
-    description:
-      "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
-    image: "images/team1.jpeg",
-  },
-  {
-    name: "John Doe",
-    role: "General Director",
-    description:
-      "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
-    image: "images/team2.jpeg",
-  },
-  {
-    name: "Rachel Tovela",
-    role: "Secretary",
-    description:
-      "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
-    image: "images/team3.jpeg",
-  },
-];
 
 
-// Function to display team members
+// This Function will display team members. You can edit the style and html structure from here
 function displayTeamMembers() {
     const teamContainer = document.getElementById('team-members');
     teamMembers.forEach(member => {
