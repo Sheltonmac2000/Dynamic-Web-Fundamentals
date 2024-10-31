@@ -7,43 +7,42 @@ const recipes = [
       "A simple yet delicious fall dessert, great with vanilla ice cream.",
     image: "images/apple-crisp.jpg",
   },
-
   {
     name: "Chocolate Chip Cookies",
     rating: 4,
     tags: ["Dessert", "Chocolate"],
     description:
-      "A simple yet delicious fall dessert, great with vanilla ice cream.",
+      "Crispy on the outside, chewy on the inside, loaded with chocolate chips.",
     image: "images/choc-chip.jpg",
   },
-
   {
     name: "Peach Cobbler",
     rating: 4,
-    tags: ["Dessert", "Peach"],
+    tags: ["Dessert", "fruit"],
     description:
-      "A simple yet delicious fall dessert, great with vanilla ice cream.",
+      "A warm and delicious peach dessert topped with a golden crust.",
     image: "images/peach-cobbler.jpg",
   },
-
   {
     name: "Banana Smoothie",
     rating: 4,
     tags: ["Smoothies", "Fruit"],
-    description:
-      "A simple yet delicious fall dessert, great with vanilla ice cream.",
+    description: "A refreshing banana smoothie, great for a healthy breakfast.",
     image: "images/banana-smoothie.webp",
   },
 ];
 
+// This function will return a random recipe  
 function getRandomListEntry(list) {
   const index = Math.floor(Math.random() * list.length);
   return list[index];
 }
 
+// THis function will be used to create the recipe template
 function recipeTemplate(recipe) {
-  return `<figure class="recipe">
-        <img src="${recipe.image}" alt="image of ${recipe.name}" />
+  return `
+    <figure class="recipe">
+        <img src="${recipe.image}" alt="Image of ${recipe.name}" />
         <figcaption>
             <ul class="recipe__tags">${tagsTemplate(recipe.tags)}</ul>
             <h2><a href="#">${recipe.name}</a></h2>
@@ -53,10 +52,12 @@ function recipeTemplate(recipe) {
     </figure>`;
 }
 
+// Function to display tags
 function tagsTemplate(tags) {
   return tags.map((tag) => `<li>${tag}</li>`).join("");
 }
 
+// Function to display rating
 function ratingTemplate(rating) {
   let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
   for (let i = 1; i <= 5; i++) {
@@ -65,24 +66,26 @@ function ratingTemplate(rating) {
   return html + "</span>";
 }
 
-// This will show the random recipe on the page
+// Function to render the recipes on the page
 function renderRecipes(recipeList) {
   const main = document.querySelector("main");
   main.innerHTML = recipeList.map((recipe) => recipeTemplate(recipe)).join("");
 }
 
+// One random recipe will appear when the page loads/refreshes
 function init() {
   const recipe = getRandomListEntry(recipes);
   renderRecipes([recipe]);
 }
 
+// Call the init function to load a random recipe when the page is opened
 init();
 
-
+// This function will filter the recipes based on the search 
 function filterRecipes(query) {
   return recipes.filter((recipe) => {
     const nameMatch = recipe.name.toLowerCase().includes(query);
-    const tagMatch = recipe.tags.find((tag) =>
+    const tagMatch = recipe.tags.some((tag) =>
       tag.toLowerCase().includes(query)
     );
     const descMatch = recipe.description.toLowerCase().includes(query);
@@ -90,9 +93,16 @@ function filterRecipes(query) {
   });
 }
 
+// The event listener for the search form
 document.querySelector("#searchForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Prevent form submission
+
   const query = document.querySelector("#searchInput").value.toLowerCase();
   const filteredRecipes = filterRecipes(query);
-  renderRecipes(filteredRecipes);
+
+  if (filteredRecipes.length > 0) {
+    renderRecipes(filteredRecipes); // Show the filtered recipes
+  } else {
+    document.querySelector("main").innerHTML = "<p>No recipes found.</p>"; // Show message if no results
+  }
 });

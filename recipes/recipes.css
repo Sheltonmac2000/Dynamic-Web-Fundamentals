@@ -44,6 +44,7 @@ form {
     body {
         max-width: 960px;
         margin: 0 auto;
+
     }
 }
 
@@ -52,9 +53,9 @@ form {
     height: 40px;
 }
 
-/* Add this to your existing CSS */
+
 .recipe {
-    border: 2px solid var(--primary-color); /* Primary color from custom properties */
+    border: 2px solid var(--primary-color); / 
     border-radius: 10px; /* Rounded corners */
     padding: 15px; /* Add some spacing inside the border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -69,7 +70,7 @@ form {
     border-radius: 10px;
 }
 
-* Search Bar styling */
+/* * Search Bar styling */ 
 .search-bar {
     display: flex;
     justify-content: center; /* Center the search bar below the logo */
@@ -96,4 +97,33 @@ form {
 
 .search-bar button:hover {
     background-color: darken(var(--primary-color), 10%); /* Darken on hover */
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    .recipe-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .recipe-container figure {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; /* Align the image and caption to the top */
+        flex-basis: 50%; /* Allow the figure to take up half the width */
+    }
+
+    .recipe-container img {
+        max-width: 100%; /* Ensure the image scales properly */
+        height: auto;
+    }
+
+    .recipe-container figcaption {
+        margin-left: 20px; /* Add space between the image and the caption */
+        text-align: left;
+        font-size: 16px;
+        max-width: 40%; /* Restrict the width of the caption */
+    }
 }
