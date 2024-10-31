@@ -1,0 +1,63 @@
+ @import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
+ :root {
+ --primary-color: #1B98E0;
+ --secondary-color: #59c3c3;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: "Amatic SC";
+ }
+
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.social a {
+    margin: 0 10px;
+}
+
+@media (min-width: 600px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 960px) {
+    body {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Add this to your existing CSS */
+.recipe {
+    border: 2px solid var(--primary-color); /* Primary color from custom properties */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Add some spacing inside the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 300px; /* Ensure the width of the recipe card doesn't get too large */
+    margin: 20px auto; /* Center the card and add space around it */
+}
