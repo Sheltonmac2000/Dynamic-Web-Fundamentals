@@ -68,3 +68,32 @@ form {
     object-fit: cover;
     border-radius: 10px;
 }
+
+* Search Bar styling */
+.search-bar {
+    display: flex;
+    justify-content: center; /* Center the search bar below the logo */
+    margin: 20px auto; /* Adds space around the search bar */
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+    width: 250px; /* Adjust the width of the input */
+}
+
+.search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+    background-color: var(--primary-color); /* Match the button to the primary color */
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: darken(var(--primary-color), 10%); /* Darken on hover */
+}
