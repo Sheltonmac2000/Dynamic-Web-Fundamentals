@@ -14,7 +14,7 @@ const recipes = [
     tags: ["Dessert", "Chocolate"],
     description:
       "A simple yet delicious fall dessert, great with vanilla ice cream.",
-    image: "images/apple-crisp.jpg",
+    image: "images/choc-chip.jpg",
   },
 
   {
@@ -23,7 +23,7 @@ const recipes = [
     tags: ["Dessert", "Peach"],
     description:
       "A simple yet delicious fall dessert, great with vanilla ice cream.",
-    image: "images/apple-crisp.jpg",
+    image: "images/peach-cobbler.jpg",
   },
 
   {
@@ -32,7 +32,7 @@ const recipes = [
     tags: ["Smoothies", "Fruit"],
     description:
       "A simple yet delicious fall dessert, great with vanilla ice cream.",
-    image: "images/apple-crisp.jpg",
+    image: "images/banana-smoothie.webp",
   },
 ];
 
