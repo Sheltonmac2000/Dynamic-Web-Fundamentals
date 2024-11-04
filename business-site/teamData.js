@@ -16,7 +16,7 @@ export const teamMembers = [
   },
   {
     name: "Rachel Tovela",
-    role: "Secretary",
+    role: " Future Secretary",
     description:
       "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
     image: "images/team3.jpeg",

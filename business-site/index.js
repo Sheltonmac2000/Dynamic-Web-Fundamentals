@@ -50,11 +50,11 @@ function displayTeamMembers() {
     const teamContainer = document.getElementById('team-members');
     teamMembers.forEach(member => {
         const memberDiv = document.createElement('div');
-        memberDiv.className = "w3-col l3 m6 w3-margin-bottom";
+        memberDiv.className = "w3-col l3 m6 w3-margin-bottom team-member-card";
 
         memberDiv.innerHTML = `
             <div class="w3-card">
-                <img src="${member.image}" alt="${member.name}" style="width:100%">
+                <img id="teamCard" src="${member.image}" alt="${member.name}" style="width:100%">
                 <div class="w3-container">
                     <h3>${member.name}</h3>
                     <p class="w3-opacity">${member.role}</p>
@@ -66,6 +66,7 @@ function displayTeamMembers() {
         teamContainer.appendChild(memberDiv);
     });
 }
+
 
 // Call the function on page load
 document.addEventListener('DOMContentLoaded', displayTeamMembers);

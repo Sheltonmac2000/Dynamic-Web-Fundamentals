@@ -5,6 +5,7 @@
     --color-4: #f0f0f0;
     --heaeding-font: "Roboto Slab";
     --paragraph-font: Raleway, sans-serif;
+    --logo-image: url("./images/logo.jpeg");
 }   
 
  /* Main content font */
@@ -25,7 +26,7 @@ body {
   background-size: cover;
   /* background-image: url("/w3images/mac.jpg"); */
   min-height: 70%;
-  background-color: violet;
+  background-color: transparent;
 }
 
 .w3-bar .w3-button {
@@ -49,6 +50,31 @@ body {
   /* height: 100vh; */
   height: 100%;
   width: 100%;
+}
+
+
+
+#hero-image-container {
+  /* background-size: cover; 
+  background-position: center; */
+  min-height: 800px;
+  background-color: transparent;
+  background-image: var(--logo-image);
+
+  /* Parralax Effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  #hero-image-container {
+    background-attachment: scroll;
+  }
 }
 
 #myGrid img {
@@ -119,4 +145,16 @@ footer {
 #grid-medical{
   background-color: lightgray;
   color: rgb(0, 0, 0);
+}
+
+#teamCard {
+        height: 60vh; /* Set a fixed height */
+        width: 100%; /* Maintain full width */
+        object-fit: cover; /* Maintain aspect ratio, cropping as needed */
+       
+}
+
+.team-member-card {
+  margin-left: 65px;
+  margin-right: 35px;
 }
