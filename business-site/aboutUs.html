@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>legal</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
@@ -11,62 +11,35 @@
     <style>
       /* Adjust navbar to avoid overlap with the location bar */
     #myNavbar {
-      margin-top: 30px; /* Adjust this based on the height of the location bar */
+      margin-top: 0px; /* Adjust this based on the height of the location bar */
     }
     </style>
 </head>
 <body>
-   <!-- Location Information -->
-<div class=" w3-top w3-bar w3-red w3-padding-small w3-center">
-  <span>📍 New York City</span>
-</div>
-
-       <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button ">HOME</a>
-  
+ <!-- Navbar (sit on top) -->
+ <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button "><i class="fa fa-home"></i> HOME</a>
+    
     <!-- Right-side navbar links -->
     <div class="w3-right w3-hide-small">
-       <a href="index.html#about" class="w3-bar-item w3-button"><i class="fa fa-2x"></i> About</a>
+      <a href="aboutUs.html" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> ABOUT US</a>
       <div id="dropdown" class="w3-dropdown-hover">
-        <button class="w3-bar-item w3-button"> Industries <i class="fa fa-caret-down"> </i> </button>
-        <div id="dropdown-content" class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="accounting.html" class="w3-bar-item w3-button">Accounting</a>
-          <a href="finance.html" class="w3-bar-item w3-button">Finance</a>
-          <a href="legal.html" class="w3-bar-item w3-button">Legal</a> 
-        </div>
+        <!-- <button class="w3-bar-item w3-button"> INDUSTRIES <i> </i> </button> -->
       </div>
       
-      <a href="./index.html#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="./index.html#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="./index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <!-- Navbar links on top -->
+      <a href="services.html" class="w3-bar-item w3-button"><i class="fa fa-briefcase"></i> SERVICES</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+    <!-- Hide right navigation links on small screens and replace them with a menu icon -->
+
+    <a href="#mySidebar" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
-</div><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css">
-    <script type="module" src="/business-site/index.js" defer></script>
-</head>
-<body>
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
@@ -80,16 +53,17 @@
           <a href="legal.html" class="w3-bar-item w3-button">Legal</a> 
         </div>
       </div>
-  <a href="index.html#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="index.html#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 
 </nav>
 
 
 
+
 <!-- Text Content -->
- <div class="w3-container" style="padding:128px 16px" id="mission-statement">
+ <div class="w3-container w3-light-gray" style="padding:128px 16px" id="mission-statement">
 
     <!-- Mission Statement -->
    <div class="w3-padding-32 w3-center">
@@ -144,7 +118,7 @@
 <!-- Footer -->
  <!-- <Footer just using CSS --> 
 
-<div class="w3-container  w3-light-grey" style="padding:128px 16px" id="origin-story">
+<div class="w3-container  w3-white" style="padding:128px 16px" id="origin-story">
     <div class="w3-large w3-center"> <h3>How we started</h3> </div>
     <p class="w3-center">
         Have you, as a business owner, ever wondered how much you make in profits? Have you wondered whether your company’s books are correct? Or do you have questions on whether your business is making money at all? You are not alone; this is the case with several small and medium size business owners. Alberto Tovela created Tovela Bookkeeping and Client Accounting Services to help business owners understand the financial position of their business, save time, and increase business profits through quality financial data.

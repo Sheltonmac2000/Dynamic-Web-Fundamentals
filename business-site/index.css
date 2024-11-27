@@ -63,7 +63,8 @@ body {
 #hero-image-container {
   /* background-size: cover; 
   background-position: center; */
- padding-top: 100px;
+  height: 100vh;
+  /* padding-top: 100vh; */
   min-height: 100vh;
   background-color: transparent;
   background-image: var(--logo-image);

@@ -42,13 +42,13 @@
   <span>📍 Schuylerville, New York </span>
 </div>
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button ">HOME</a>
+    <a href="index.html" class="w3-bar-item w3-button "> <i class="fa fa-home"> </i> HOME</a>
     
     <!-- Right-side navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="aboutUs.html" class="w3-bar-item w3-button"><i class="fa fa-2x"></i> ABOUT US</a>
+      <a href="aboutUs.html" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i>  ABOUT US</a>
       <div id="dropdown" class="w3-dropdown-hover">
-        <button class="w3-bar-item w3-button"> INDUSTRIES <i> </i> </button>
+        <!-- <button class="w3-bar-item w3-button"> INDUSTRIES <i> </i> </button> -->
       </div>
       
       <!-- Navbar links on top -->
@@ -69,16 +69,8 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="#mySidebar" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <div id="dropdown" class="w3-dropdown-hover">
-        <button class="w3-bar-item w3-button"> Industries <i class="fa fa-caret-right"> </i> </button>
-        <div id="dropdown-content" class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#" class="w3-bar-item w3-button"></a>
-          <a href="accounting.html" class="w3-bar-item w3-button">Accounting</a>
-          <a href="finance.html" class="w3-bar-item w3-button">Finance</a>
-          <a href="legal.html" class="w3-bar-item w3-button">Legal</a> 
-        </div>
-      </div>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+  <a href="services.html" class="w3-bar-item w3-button"><i></i> SERVICES</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
   <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
@@ -104,7 +96,7 @@
 </header>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
+<div class="w3-container w3-light-gray" style="padding:128px 16px" id="about">
   <h3 class="w3-center">ABOUT THE COMPANY</h3>
   <p class="w3-center w3-large">Key features of our company</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
@@ -139,7 +131,7 @@
   <div class="w3-row-padding" style="margin-top: 32px;">
 
     <!-- Team Section Title -->
-    <h3 class="w3-center w3-bold" style="margin-bottom: 40px;">Meet Our Team</h3>
+    <h3 id="team" class="w3-center w3-bold" style="margin-bottom: 40px;">Meet Our Team</h3>
 
     <!-- Team Members Grid -->
     <div id="teamGrid" class="w3-row-padding w3-center">
@@ -214,7 +206,7 @@
   </div>
 
   <div class="w3-center" style="margin-top: 32px;">
-    <a href="#completeList" class="w3-button w3-black w3-hover-light-grey">See Complete List</a>
+    <a href="https://proadvisor.intuit.com/app/accountant/search?searchId=alberto-tovela17" class="w3-button w3-black w3-hover-light-grey">See Complete List</a>
   </div>
 </div>
 
@@ -305,7 +297,7 @@
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> New York, US</p>
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Schuylerville, New York</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (833) 868-3522</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: tovelabookkeeping@gmail.com </p>
     <br>
@@ -345,7 +337,7 @@
 <!-- <Footer just using CSS --> 
 <footer id="home-footer">
     <div class="footer w3-padding-64">
-      <a href="#heroImage" class="w3-button w3-light-grey w3-center"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <a href="index.html" class="w3-button w3-light-grey w3-center"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="social-icons">
             <i class="fa fa-facebook-official"></i>
             <i class="fa fa-instagram"></i>
@@ -355,7 +347,7 @@
             <i class="fa fa-linkedin"></i>
 
     <div class="w3-margin-bottom w3-center" style="margin-bottom:48px"> 
-    <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i> New York, US</p>
+    <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i>  Schuylerville, New York</p>
     <p><i class="fa fa-phone fa-fw w3-margin-right"></i> Phone: +1 (833) 868-3522</p>
     <p><i class="fa fa-envelope fa-fw w3-margin-right"> </i> Email: tovelabookkeeping@gmail.com </p>
   </div>
