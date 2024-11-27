@@ -16,6 +16,10 @@ body, html {
   line-height: 1.8;
 }
 
+/* html {
+    scroll-padding-top: 70px;
+} */
+
 body {
   margin: 0;
 }
@@ -31,6 +35,8 @@ body {
 
 .w3-bar .w3-button {
   padding: 16px;
+  top: 0px;
+  z-index: 1000;
 }
 
 #teamMember {
@@ -57,7 +63,8 @@ body {
 #hero-image-container {
   /* background-size: cover; 
   background-position: center; */
-  min-height: 800px;
+ padding-top: 100px;
+  min-height: 100vh;
   background-color: transparent;
   background-image: var(--logo-image);
 
@@ -68,6 +75,11 @@ body {
   background-size: cover;
   
 }
+
+ 
+
+ 
+
 
 
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
@@ -155,6 +167,65 @@ footer {
 }
 
 .team-member-card {
-  margin-left: 65px;
-  margin-right: 35px;
+  /* flex: 1 1 calc(33.333% - 16px); Ensures three columns on large screens */
+  /* max-width: calc(33.333% - 16px); Keeps the width consistent */
+  /* margin-bottom: 16px; */
+
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Ensure space is distributed evenly */
+  height: 350px; /* Set a fixed height */
+  border-radius: 8px; /* Rounded corners */
 }
+
+.team-member-card .w3-card {
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member-card img {
+  /* border-radius: 50%;
+  max-width: 80%;
+  margin-bottom: 20px;
+  object-fit: cover; */
+
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures images maintain their aspect ratio */
+  border-radius: 8px 8px 0 0;
+}
+
+
+.team-member-card button {
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+}
+
+.team-member-card button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* For smaller screens (mobile/tablets), adjust layout */
+@media only screen and (max-width: 767px) {
+  .team-member-card {
+    flex: 1 1 calc(100% - 16px); /* Stack cards on small screens */
+    max-width: calc(100% - 16px);
+  }
+}
+
+
+
+    /* Adjust navbar to avoid overlap with the location bar */
+    #myNavbar {
+        /* Adjust this based on the height of the location bar */
+      position: fixed;
+      /* top: 0px; */
+      z-index: 1000;
+
+    }

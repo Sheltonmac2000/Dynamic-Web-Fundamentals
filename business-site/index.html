@@ -28,28 +28,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="index.css">
 <script type="module" src="index.js" defer></script>
-
+ 
 </head>
-<body>
+<body >
 
+  <!-- Location Information -->
+
+ 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
+  <!-- Location Information -->
+  <div id="myLocation" class="w3-bar w3-light-grey w3-padding-small w3-center">
+  <span>📍 Schuylerville, New York </span>
+</div>
   <div class="w3-bar w3-white w3-card" id="myNavbar">
     <a href="index.html" class="w3-bar-item w3-button ">HOME</a>
     
     <!-- Right-side navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="aboutUs.html" class="w3-bar-item w3-button"><i class="fa fa-2x"></i> About Us</a>
+      <a href="aboutUs.html" class="w3-bar-item w3-button"><i class="fa fa-2x"></i> ABOUT US</a>
       <div id="dropdown" class="w3-dropdown-hover">
-        <button class="w3-bar-item w3-button"> Industries <i class="fa fa-caret-down"> </i> </button>
-        <div id="dropdown-content" class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#" class="w3-bar-item w3-button"></a>
-          <a href="accounting.html" class="w3-bar-item w3-button">Accounting</a>
-          <a href="finance.html" class="w3-bar-item w3-button">Finance</a>
-          <a href="legal.html" class="w3-bar-item w3-button">Legal</a> 
-        </div>
+        <button class="w3-bar-item w3-button"> INDUSTRIES <i> </i> </button>
       </div>
       
+      <!-- Navbar links on top -->
+      <a href="services.html" class="w3-bar-item w3-button"><i class="fa fa-briefcase"></i> SERVICES</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
@@ -130,9 +133,26 @@
   </div>
 </div>
 
+<!-- JS Team Section -->
+<!-- Team Section Container. Content will be put it by JS file -->
+<div class="w3-container w3-white" style="padding:128px 16px">
+  <div class="w3-row-padding" style="margin-top: 32px;">
+
+    <!-- Team Section Title -->
+    <h3 class="w3-center w3-bold" style="margin-bottom: 40px;">Meet Our Team</h3>
+
+    <!-- Team Members Grid -->
+    <div id="teamGrid" class="w3-row-padding w3-center">
+      <!-- The team member cards will be dynamically injected here -->
+    </div>
+
+  </div>
+</div>
+  <!-- End of JS Team Section -->
+
 
  <!-- Work Section -->
-<div class="w3-container  w3-light-grey" style="padding:128px 16px" id="work">
+<!-- <div class="w3-container  w3-light-grey" style="padding:128px 16px" id="work">
   <h3 class="w3-center">OUR WORK</h3>
   <p class="w3-center w3-large">The Industries We Serve</p>
 
@@ -163,7 +183,7 @@
     </div>
 
     <!-- Additional Categories -->
-    <div id="grid-legal" class="w3-col l3 m6 w3-border industry-item" style="display:none;">
+    <!-- <div id="grid-legal" class="w3-col l3 m6 w3-border industry-item" style="display:none;">
       <img src="images/legal.jpg" style="width:100%" class="w3-hover-opacity" alt="Accounting for Legal Services">
       <h3> Legal Services</h3>
       <p>Our accounting services for legal firms ensure proper financial management, allowing you to focus on providing exceptional legal counsel.</p>
@@ -176,66 +196,86 @@
     </div>
 
   </div>
+</div>  -->
+
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">OUR WORK</h3>
+  <p class="w3-center w3-large">The Industries We Serve</p>
+
+  <!-- Slideshow Container -->
+  <div id="slideshow-container" class="w3-content" style="max-width:1200px; position:relative;">
+    <div id="mySlides" class="w3-row-padding w3-center" style="overflow: hidden; position: relative;">
+      <!-- Industry items will be dynamically inserted here -->
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="w3-button w3-black w3-hover-light-grey w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-hover-light-grey w3-display-right" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+
+  <div class="w3-center" style="margin-top: 32px;">
+    <a href="#completeList" class="w3-button w3-black w3-hover-light-grey">See Complete List</a>
+  </div>
+</div>
+
+<!-- Add your industry items as hidden elements -->
+ <!-- Work Section Slideshow -->
+<div id="hidden-industry-items" style="display: none;">
+
+  
+  <div class="industry-item">
+    <img src="images/farming.jpg" alt="Agriculture" style="width: 80%; border-radius: 25px;">
+    <h3>Agriculture</h3>
+    <p>Our specialized accounting services for the agriculture sector are designed to meet the unique financial needs of farmers, agribusinesses, and agricultural enterprises.</p>
+  </div>
+  <div class="industry-item">
+    <img src="images/manufacturing.jpg" alt="Manufacturing" style="width: 80%; border-radius: 25px;">
+    <h3>Manufacturing</h3>
+    <p>Our accounting services for the manufacturing sector streamline financial processes and improve cost management.</p>
+  </div>
+  <div class="industry-item">
+    <img src="images/medical.jpeg" alt="Medical Care" style="width: 80%; border-radius: 25px;">
+    <h3>Medical Care</h3>
+    <p>Our accounting services for the medical care sector optimize financial processes and ensure compliance with healthcare regulations.</p>
+  </div>
+  <div class="industry-item">
+    <img src="images/restaurant.webp" alt="Catering" style="width: 80%; border-radius: 25px;">
+    <h3>Catering</h3>
+    <p>Our accounting services for the catering industry enhance financial management and streamline operations.</p>
+  </div>
+  <div class="w3-center" style="margin-top: 32px;">
+    <a href="#completeList" class="w3-button w3-black w3-hover-light-grey">See Complete List</a>
+  </div>
 </div>
 <!-- End of work section -->
 
+
 <!-- Certifications Section -->
 <div class="w3-container w3-white" style="padding:128px 16px">
-  <div class="w3-row-padding">
-   
-   <div id="cert-images" class="w3-row-padding">
-    <h3 class="w3-center w3-bold" > Our Certifications</h3>
-    <img src="images/cert1.jpeg" alt="Advanced QuickBooks Online Certification" class="w3-padding-small w3-col l3 m6  " style="margin-right: 13%;">
-    <img src="images/cert2.jpeg" alt="QuickBooks Payroll Certification" class="w3-padding-small w3-col l3 m6 " style="margin-right: 13%;">
-    <img src="images/cert3.jpeg" alt="ProAdvisor - Gold Certification" class="w3-padding-small w3-col l3 m6 ">
-   </div>
+  <div class="w3-row-padding" style="margin-top: 32px;">
+
+    <!-- Certifications Section Title -->
+    <h3 class="w3-center w3-bold" style="margin-bottom: 40px;">Our Certifications</h3>
+
+    <div id="cert-images" class="w3-row-padding w3-center">
+      <!-- Certification 1 -->
+      <div class="w3-col l4 m6 s12">
+        <img src="images/cert1.jpeg" alt="Advanced QuickBooks Online Certification" class="w3-padding-small w3-hover-opacity w3-margin-bottom" style="width: 100%;">
+      </div>
+      <!-- Certification 2 -->
+      <div class="w3-col l4 m6 s12">
+        <img src="images/cert2.jpeg" alt="QuickBooks Payroll Certification" class="w3-padding-small w3-hover-opacity w3-margin-bottom" style="width: 100%;">
+      </div>
+      <!-- Certification 3 -->
+      <div class="w3-col l4 m6 s12">
+        <img src="images/cert3.jpeg" alt="ProAdvisor - Gold Certification" class="w3-padding-small w3-hover-opacity w3-margin-bottom" style="width: 100%;">
+      </div>
+    </div>
+
   </div>
 </div>
 <!-- End of Certifications -->
 
-
-<!-- Team Section -->
-<!-- <div  class="w3-container w3-light-gray" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who runs this company</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px"> -->
-    <!-- image1 -->
-    <!-- <div class="w3-col l3 m6 w3-margin-bottom" style="margin-right: 10%; margin-left: 2%;">
-      <div id="teamMember" class="w3-card">
-        <img src="images/team1.jpeg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>Alberto Tovela</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div> -->
-    <!-- image2 -->
-    <!-- <div class="w3-col l3 m6 w3-margin-bottom" style="margin-right: 10%;">
-      <div id="teamMember" class="w3-card">
-        <img src="images/team2.jpeg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">General Director</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div> -->
-
-
-    <!-- JS Team Section -->
-    <!-- Team Section Container. Content will be put it by JS file -->
-<div class="w3-container w3-light-gray" style="padding:128px 16px" id="team">
-    <h3 class="w3-center">THE TEAM</h3>
-    <p class="w3-center w3-large">The ones who run this company</p>
-    <div class="w3-row-padding w3-grayscale" style="margin-top:64px" id="team-members">
-        <!-- Team members will be inserted here by JavaScript -->
-    </div>
-</div>
-
-    <!-- End of JS Team Section -->
     
 <!-- Promo Section "Statistics" -->
 <div id="teamMember2" class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
@@ -266,8 +306,8 @@
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div style="margin-top:48px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> New York, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (833) 868-3522</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: tovelabookkeeping@gmail.com </p>
     <br>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
@@ -275,20 +315,37 @@
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="w3-button w3-black" type="submit">
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
+
+         <!-- New Calendly Button -->
+        <a href="https://calendly.com/tovelabookkeepingandcas/discusion-de-propuesta" target="https://calendly.com/tovelabookkeepingandcas/discusion-de-propuesta" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+           <i class="fa fa-calendar"></i> 
+           SCHEDULE A CALL
+        </a>
+
       </p>
     </form>
-    <!-- Image of location/map -->
-    <img src="images/city3.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px" alt="New York City Background">
+  <!-- Google Maps Embed -->
+    <div class="w3-center" style="margin-top:48px;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.163211996866!2d-73.57763478453147!3d43.09840137914212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de85824e9146e5%3A0xd07c8eb6e7ff746!2sSchuylerville%2C%20NY%2012871%2C%20USA!5e0!3m2!1sen!2sus!4v1697156082576!5m2!1sen!2sus" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
   </div>
 </div>
 
 <!-- <Footer just using CSS --> 
 <footer id="home-footer">
     <div class="footer w3-padding-64">
-      <a href="#heroImage" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <a href="#heroImage" class="w3-button w3-light-grey w3-center"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="social-icons">
             <i class="fa fa-facebook-official"></i>
             <i class="fa fa-instagram"></i>
@@ -296,9 +353,16 @@
             <i class="fa fa-pinterest-p"></i>
             <i class="fa fa-twitter"></i>
             <i class="fa fa-linkedin"></i>
+
+    <div class="w3-margin-bottom w3-center" style="margin-bottom:48px"> 
+    <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i> New York, US</p>
+    <p><i class="fa fa-phone fa-fw w3-margin-right"></i> Phone: +1 (833) 868-3522</p>
+    <p><i class="fa fa-envelope fa-fw w3-margin-right"> </i> Email: tovelabookkeeping@gmail.com </p>
+  </div>
         </div>
         <p>&copy; 2024 Tovela Bookkeeping & Client Accounting Services | All Rights Reserved</p>
     </div>
+
 </footer> 
 <!-- End of the footer -->
  
