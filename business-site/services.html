@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <script type="module" src="index.js" defer></script>
+
 
   <!-- gooogle font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +49,7 @@
     #services-hero-text {
        color: rgb(255, 255, 255);
        /* font-style: "poppins",raleway; */
-       font-family: 'Roboto Slab', serif;
+        font-family: 'Roboto Slab', serif;
         font-weight: 1000; /* Bold weight */
         text-align: center;
         padding-top: 25vh;
@@ -57,6 +59,55 @@
       color: rgb(255, 255, 255);
       /* font-style: "poppins", raleway; */
     }
+
+    @media screen and (max-width: 768px) {
+      #services-hero-text {
+        padding-top: 10vh;
+        font-size: 2rem; /* Smaller font size for the header */
+        line-height: 1.3;
+
+      }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Adjust the padding for smaller screens */
+  section.w3-container {
+    padding: 32px 8px; /* Reduce padding */
+  }
+
+  .w3-row-padding {
+    flex-direction: column; /* Stack items vertically */
+    gap: 16px; /* Keep a clean gap between items */
+  }
+
+  .service-item {
+    flex: 1 1 100%; /* Full width for each item */
+    max-width: 100%; /* Ensure no horizontal restriction */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjust for very small screens */
+  section.w3-container {
+    padding: 16px 4px; /* Further reduce padding */
+  }
+
+  .service-item h3 {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  .service-item p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+
+  .service-item {
+    flex: 1 1 100%; /* Full width for each item */
+    max-width: 100%; /* Full width */
+    margin-bottom: 16px; /* Add spacing between items */
+  }
+}
+
 
   </style>
 </head>
@@ -89,16 +140,8 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <div id="dropdown" class="w3-dropdown-hover">
-        <button class="w3-bar-item w3-button"> Industries <i class="fa fa-caret-right"> </i> </button>
-        <div id="dropdown-content" class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#" class="w3-bar-item w3-button"></a>
-          <a href="accounting.html" class="w3-bar-item w3-button">Accounting</a>
-          <a href="finance.html" class="w3-bar-item w3-button">Finance</a>
-          <a href="legal.html" class="w3-bar-item w3-button">Legal</a> 
-        </div>
-      </div>
+  <a href="index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+  <a href="services.html" class="w3-bar-item w3-button"><i></i> SERVICES</a>
   <a href="index.html#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
   <a href="index.html#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
   <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
