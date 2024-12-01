@@ -16,12 +16,17 @@ body, html {
   line-height: 1.8;
 }
 
-/* html {
+html {
     scroll-padding-top: 70px;
-} */
+}
 
 body {
   margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+html {
+  overflow-x: hidden; /* Ensure the root element doesn't cause overflow */
 }
 
 /* Full height image header */
@@ -58,37 +63,44 @@ body {
   width: 100%;
 }
 
-
-
 #hero-image-container {
+      background: url('images/logo.jpeg') no-repeat center center;
+      background-size: cover;
+      font-weight: bold;
+      font-weight: 900;
+      text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+      background-color: transparent;
+      color: rgb(0, 0, 0);
+      padding: 80px 16px;
+      text-align: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 125vh;
+      opacity: 0.95;
+      z-index: 1;
+}
+
+
+
+/* #hero-image-container { */
   /* background-size: cover; 
   background-position: center; */
-  height: 100vh;
+  /* height: 100vh; */
   /* padding-top: 100vh; */
-  min-height: 100vh;
+  /* min-height: 100vh;
   background-color: transparent;
   background-image: var(--logo-image);
+  
 
   /* Parralax Effect */
-  background-attachment: fixed;
+  /* background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   
-}
+} */ 
 
- 
-
- 
-
-
-
-/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
-  #hero-image-container {
-    background-attachment: scroll;
-  }
-}
 
 #myGrid img {
   height: 40vh;
