@@ -64,7 +64,7 @@ html {
 }
 
 #hero-image-container {
-      background: url('images/logo.jpeg') no-repeat center center;
+      background: url('./images/logo.jpeg') no-repeat center center;
       background-size: cover;
       font-weight: bold;
       font-weight: 900;
