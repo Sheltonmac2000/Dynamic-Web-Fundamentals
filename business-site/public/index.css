@@ -69,7 +69,7 @@ html {
       font-weight: bold;
       font-weight: 900;
       text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
-      background-color: transparent;
+      /* background-color: lightgray; */
       color: rgb(0, 0, 0);
       padding: 80px 16px;
       text-align: center;
@@ -79,6 +79,32 @@ html {
       height: 125vh;
       opacity: 0.95;
       z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #hero-image-container {
+    background-size: contain;  /* Ensures the whole image fits inside without being cut off */
+    height: 60vh;  /* Adjust the height to make sure the image is fully visible */
+    width: 100%;
+  }
+}
+ 
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  #hero-image-container {
+   background-size: contain;  /* Ensure the entire image is visible without being cut off */
+   height: 60vh;
+   
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  #hero-image-container {
+   background-size: contain;  /* Ensure the entire image is visible without being cut off */
+   height: 60vh;
+   
+  }
 }
 
 

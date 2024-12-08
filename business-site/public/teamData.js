@@ -9,7 +9,7 @@ export const teamMembers = [
   },
   {
     name: "Alberto Tovela",
-    role: "CEO & Founder",
+    role: "Founder & Senior Partner",
     description:
       "Alberto Tovela, is a proud father of a beautiful daughter. Before forming Tovela Bookkeeping and Client Accounting Services, Tovela worked at PWC as an auditor, Private Tax Solutions as a Tax Professional, and Cooper Norman as Client Accounting Services (CAS) Accountant doing Bookkeeping and Fractional CFO services. His passion is providing Bookkeeping, Controller, and CFO services to increase profits for business owners.",
     image: "images/tovela.jpeg",

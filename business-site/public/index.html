@@ -78,7 +78,7 @@
 </nav>
 
 <!-- Header with full-height image -->
-<header id="hero-image-container" class="backgroundImg-1 w3-container">
+<header id="hero-image-container" class="backgroundImg-1 w3-container w3-light-gray">
 <!-- </header> -->
    
 
@@ -329,7 +329,7 @@
 
          <!-- New Calendly Button -->
   <div class="w3-center" style="margin-top: 16px;">
-    <a href="https://calendly.com/tovelabookkeepingandcas/discusion-de-propuesta" target="_blank" class="w3-button w3-black w3-padding-large w3-large">
+    <a href="https://calendly.com/tovelabookkeepingandcas/booking-a-consultation" target="_blank" class="w3-button w3-black w3-padding-large w3-large">
       <i class="fa fa-calendar"></i> 
       SCHEDULE A CALL  
     </a>
@@ -341,23 +341,53 @@
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (833) 868-3522</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: support@tovelaaccounting.com </p>
     <br>
-    <form action="/action_page.php" target="_blank" method="post">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
 
-      <div class="w3-center">
-        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-center" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </div>
- 
-        
+    <form id="contactForm">
+  <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="name"></p>
+  <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="email"></p>
+  <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="subject"></p>
+  <p><textarea class="w3-input w3-border" placeholder="Message" required name="message"></textarea></p>
+  <div class="w3-center">
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-center" type="submit">
+      <i class="fa fa-paper-plane"></i> SEND MESSAGE
+    </button>
+  </div>
+</form>
 
-      </p>
-    </form>
+<!-- Script for the contact form -->
+ <script>
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent page reload
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('https://<your-cloud-function-url>', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        form.reset();
+      } else {
+        alert('Failed to send the message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  });
+</script> 
 
 
   <!-- Google Maps Embed -->
