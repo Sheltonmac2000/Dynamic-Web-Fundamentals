@@ -2,8 +2,9 @@ const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
 
 // Get email credentials from Firebase config
-const emailUser = functions.config().email.user;
-const emailPass = functions.config().email.pass;
+
+const emailUser = process.env.EMAIL_USER;
+const emailPass = process.env.EMAIL_PASS;
 
 // Create the transporter
 const transporter = nodemailer.createTransport({
