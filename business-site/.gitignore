@@ -67,3 +67,4 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+backend/yes/google-cloud-sdk/lib/googlecloudsdk/command_lib/beyondcorp/app/connectors/__init__.py

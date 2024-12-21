@@ -296,6 +296,73 @@
 </div>
 <!-- End of Certifications -->
 
+<!-- Reviews Section -->
+ <div class="reviews-section w3-container w3-light-gray w3-padding-64">
+  <h2 class="w3-center">What Our Clients Say</h2>
+
+  <!-- Slideshow container -->
+  <div class="w3-content w3-display-container" style="max-width:800px; position:relative;">
+    <div class="mySlides w3-display-container">
+      <blockquote class="w3-padding-32">
+        <p>"Tovela Accounting helped streamline our financial operations. Highly recommend!"</p>
+        <footer class="w3-light-gray"> — John Doe</footer>
+      </blockquote>
+    </div>
+
+    <div class="mySlides w3-display-container">
+      <blockquote class="w3-padding-32">
+        <p>"Amazing customer service and expert advice. Best accounting firm we've worked with!"</p>
+        <footer class="w3-light-gray"> — Jane Smith</footer>
+      </blockquote>
+    </div>
+
+    <div class="mySlides w3-display-container">
+      <blockquote class="w3-padding-32">
+        <p>"Highly professional and reliable. They exceeded all expectations!"</p>
+        <footer class="w3-light-gray"> — Alex Johnson</footer>
+      </blockquote>
+    </div>
+
+    <div class="mySlides w3-display-container">
+      <blockquote class="w3-padding-32">
+        <p>"Highly professional and reliable. They exceeded all expectations!"</p>
+        <footer class="w3-light-gray"> — James Johnson</footer>
+      </blockquote>
+    </div>
+
+    <!-- Navigation arrows -->
+    <button class="w3-button w3-black w3-display-left" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusSlides(1)">&#10095;</button>
+  </div>
+
+  <!-- External review links -->
+  <div class="w3-center w3-padding-32">
+    <a href="https://www.trustpilot.com/review/tovelaaccounting.com" target="_blank" class="w3-button w3-black w3-margin">View on Trustpilot</a>
+    <a href="https://www.google.com/localservices/prolist?spp=Cg0vZy8xMWx5bHFtbWtk&source=sh/x/loc/srv/m1/0&kgs=5b9f0451f8a6389a&src=2&slp=UhUIARIREg8iDS9nLzExbHlscW1ta2Q#ts=3" target="_blank" class="w3-button w3-black w3-margin">View on Google Reviews</a>
+    <a href="https://proadvisor.intuit.com/app/accountant/search?searchId=alberto-tovela17" target="_blank" class="w3-button w3-black w3-margin">View on ProAdvisor</a>
+  </div>
+
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>
+</div>
+
+<!-- End of Reviews -->
     
 <!-- Promo Section "Statistics" -->
 
@@ -322,7 +389,7 @@
 
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+<div class="w3-container " style="padding:128px 16px" id="contact">
   <h3 class="w3-center">CONTACT US</h3>
   <p class="w3-center w3-large">Our numbers tell a story—let's make sure it's one of growth and profit. From streamlined bookkeeping to expert CFO insights and stress-free taxes, we’re here to help your business thrive. Schedule an call today!</p>
 

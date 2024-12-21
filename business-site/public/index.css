@@ -339,3 +339,22 @@ footer {
     max-width: 100%;
   }
 }
+
+/* Reviews Section */
+.reviews-section blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #ccc;
+  padding-left: 16px;
+}
+
+.reviews-section footer {
+  font-weight: bold;
+  text-align: left;
+  margin-top: 8px;
+  /* background-color: lightgrey; */
+}
+
+.mySlides {
+  display: none;
+}
